@@ -1,0 +1,24 @@
+---
+version: '3.7'
+services:
+  status_page_api:
+    image: status-page-api:test
+    build: ./status-page-api
+    container_name: status_page_api
+    ports:
+      - "3000:3000"
+    environment:
+      - AUTH_WEBHOOK_MAIL=http://token_mail_distributor:3001
+
+  token_mail_distributor:
+    image: token-mail-distributor:test
+    build: ./token-mail-distributor
+    container_name: token_mail_distributor
+    environment:
+      - SMTP_HOST
+      - SMTP_PORT
+      - SMTP_SECURE
+      - SMTP_USER
+      - SMTP_PASSWORD
+      - MAIL_SENDER
+...

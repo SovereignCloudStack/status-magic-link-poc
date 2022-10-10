@@ -1,0 +1,25 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "globals": {
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "parser": "babel-eslint",
+    "ecmaVersion": 8
+  },
+  "plugins": [],
+  "rules": {
+    "no-extra-parens": "error",
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "quote-props": ["error", "as-needed"],
+    "space-before-function-paren": "error",
+    "spaced-comment": ["error", "always"]
+  }
+}
